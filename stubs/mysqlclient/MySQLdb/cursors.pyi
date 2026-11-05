@@ -18,11 +18,11 @@ class BaseCursor:
     connection: Incomplete
 
     warning_count: int
-    description: Incomplete | None
-    description_flags: Incomplete | None
+    description: tuple[tuple[str, int, int, int, int, int, int], ...] | None
+    description_flags: tuple[int, ...] | None
     rowcount: int
     arraysize: int
-    lastrowid: Incomplete | None
+    lastrowid: int | None
     rownumber: Incomplete | None
 
     def __init__(self, connection) -> None: ...
